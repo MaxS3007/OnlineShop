@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "930674821877",
+    "firebase_url": "https://onlineshop-a84d2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "onlineshop-a84d2",
+    "storage_bucket": "onlineshop-a84d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930674821877:android:3ba3d0ded81a29083893bc",
+        "android_client_info": {
+          "package_name": "com.diplom.onlineshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAbKtnltwPOPSqyeLew7gP5qunAEmHkIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
