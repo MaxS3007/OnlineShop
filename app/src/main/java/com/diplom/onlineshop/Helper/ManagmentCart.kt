@@ -12,7 +12,7 @@ class ManagmentCart(val context: Context) {
     private val tinyDB = TinyDB(context)
 
     fun insertFavoriteItem(item: ItemsModel) {
-        var listFood = getListFavorite()
+        val listFood = getListFavorite()
         val existAlready = listFood!!.any { it.title == item.title }
         val index = listFood!!.indexOfFirst { it.title == item.title }
 
@@ -31,7 +31,7 @@ class ManagmentCart(val context: Context) {
         }
     }
 
-    fun getListFavorite(): ArrayList<ItemsModel>? {
+    fun getListFavorite(): ArrayList<ItemsModel> {
         return tinyDB.getListObject("FavoriteList") ?: arrayListOf()
     }
 
@@ -44,7 +44,7 @@ class ManagmentCart(val context: Context) {
     }
 
     fun insertFood(item: ItemsModel) {
-        var listFood = getListCart()
+        val listFood = getListCart()
         val existAlready = listFood.any { it.title == item.title }
         val index = listFood.indexOfFirst { it.title == item.title }
 

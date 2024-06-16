@@ -1,10 +1,8 @@
 package com.diplom.onlineshop.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.diplom.onlineshop.Adapter.CartAdapter
 import com.diplom.onlineshop.Adapter.MyZakazAdapter
 import com.diplom.onlineshop.Helper.ChangeNumberItemsListener
 import com.diplom.onlineshop.Helper.ManagmentCart

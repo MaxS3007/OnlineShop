@@ -2,11 +2,6 @@ package com.diplom.onlineshop.activity
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.diplom.onlineshop.Helper.ChangeNumberItemsListener
 import com.diplom.onlineshop.Helper.ManagmentCart
 import com.diplom.onlineshop.R
@@ -89,7 +84,7 @@ class ZakazActivity : BaseActivity() {
                 kurerTxt.visibility = View.VISIBLE
                 timedelTxt.visibility = View.VISIBLE
             }
-            var changeNumberItemsListener: ChangeNumberItemsListener? = null
+            val changeNumberItemsListener: ChangeNumberItemsListener? = null
             managmentCart.removeItems(managmentCart.getListCart(),object : ChangeNumberItemsListener {
                 override fun onChanged() {
                     changeNumberItemsListener?.onChanged()
