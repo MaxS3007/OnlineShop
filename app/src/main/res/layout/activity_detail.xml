@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Выбрать размер"
+                    android:text="Фасовка / вес / размер"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="14sp"
