@@ -3,6 +3,7 @@ package com.diplom.onlineshop.Adapter
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -48,10 +49,18 @@ class FavItemAdapter(val items: MutableList<ItemsModel>): RecyclerView.Adapter<F
             .apply(requestOptions)
             .into(holder.binding.pic)
 
+        if (items[position].ostatok > 0) {
+            holder.binding.ostatokTxt.visibility = View.GONE
+        } else {
+            holder.binding.ostatokTxt.visibility = View.VISIBLE
+        }
+
         holder.itemView.setOnClickListener{
-            val intent= Intent(holder.itemView.context, DetailActivity::class.java)
-            intent.putExtra("object", items[position])
-            holder.itemView.context.startActivity(intent)
+            if (items[position].ostatok > 0) {
+                val intent= Intent(holder.itemView.context, DetailActivity::class.java)
+                intent.putExtra("object", items[position])
+                holder.itemView.context.startActivity(intent)
+            }
         }
         holder.binding.bestBtn.setOnClickListener {
             if (items[position].BestItem == 0) {

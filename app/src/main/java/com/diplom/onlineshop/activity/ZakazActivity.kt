@@ -95,6 +95,9 @@ class ZakazActivity : BaseActivity() {
                     changeNumberItemsListener?.onChanged()
                 }
             })
+//            System.out.println(managmentCart.getListCart())
+//            System.out.println(managmentCart.getZakazCart())
+
 
         }
         binding.clearBtn.setOnClickListener {

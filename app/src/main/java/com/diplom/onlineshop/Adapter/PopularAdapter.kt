@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat.getColor
@@ -64,10 +65,18 @@ class PopularAdapter(val items: MutableList<ItemsModel>, context: Context,) :
             .apply(requestOptions)
             .into(holder.binding.pic)
 
+        if (items[position].ostatok > 0) {
+            holder.binding.ostatokTxt.visibility = View.GONE
+        } else {
+            holder.binding.ostatokTxt.visibility = View.VISIBLE
+        }
+
         holder.itemView.setOnClickListener{
-            val intent= Intent(holder.itemView.context,DetailActivity::class.java)
-            intent.putExtra("object", items[position])
-            holder.itemView.context.startActivity(intent)
+            if (items[position].ostatok > 0) {
+                val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+                intent.putExtra("object", items[position])
+                holder.itemView.context.startActivity(intent)
+            }
         }
 
         holder.binding.bestBtn.setOnClickListener {

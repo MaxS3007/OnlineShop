@@ -64,7 +64,7 @@ class MainActivity : BaseActivity() {
             startActivity((Intent(this@MainActivity, FavItemActivity::class.java)))
         }
         binding.orderBtn.setOnClickListener {
-            //startActivity((Intent(this@MainActivity, CartActivity::class.java)))
+            startActivity((Intent(this@MainActivity, MyZakazActivity::class.java)))
         }
         binding.userBtn.setOnClickListener {
             startActivity((Intent(this@MainActivity, ProfileActivity::class.java)))

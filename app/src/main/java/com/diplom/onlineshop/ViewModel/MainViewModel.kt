@@ -36,11 +36,8 @@ class MainViewModel(): ViewModel(){
                 }
                 _banner.value = lists
             }
-
             override fun onCancelled(error: DatabaseError) {
-
             }
-
         })
     }
 
@@ -57,11 +54,8 @@ class MainViewModel(): ViewModel(){
                 }
                 _brand.value = lists
             }
-
             override fun onCancelled(error: DatabaseError) {
-
             }
-
         })
     }
 
@@ -80,11 +74,8 @@ class MainViewModel(): ViewModel(){
                 }
                 _popular.value = lists
             }
-
             override fun onCancelled(error: DatabaseError) {
-
             }
-
         })
     }
 }

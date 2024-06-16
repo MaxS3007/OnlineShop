@@ -61,6 +61,10 @@ class ManagmentCart(val context: Context) {
         return tinyDB.getListObject("CartList") ?: arrayListOf()
     }
 
+    fun getZakazCart(): ArrayList<ItemsModel> {
+        return tinyDB.getListObject("ZakazList") ?: arrayListOf()
+    }
+
     fun minusItem(listFood: ArrayList<ItemsModel>, position: Int, listener: ChangeNumberItemsListener) {
         if (listFood[position].numberInCart == 1) {
             listFood.removeAt(position)
@@ -72,6 +76,7 @@ class ManagmentCart(val context: Context) {
     }
 
     fun removeItems(listFood: ArrayList<ItemsModel>, listener: ChangeNumberItemsListener) {
+        tinyDB.putListObject("ZakazList", listFood)
         listFood.clear()
         tinyDB.putListObject("CartList", listFood)
         listener.onChanged()
@@ -85,6 +90,15 @@ class ManagmentCart(val context: Context) {
 
     fun getTotalFee(): Double {
         val listFood = getListCart()
+        var fee = 0.0
+        for (item in listFood) {
+            fee += item.price * item.numberInCart
+        }
+        return fee
+    }
+
+    fun getTotalFeeMyZakaz(): Double {
+        val listFood = getZakazCart()
         var fee = 0.0
         for (item in listFood) {
             fee += item.price * item.numberInCart

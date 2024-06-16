@@ -9,4 +9,7 @@
     <color name="dark_blue">#2E4058</color>
     <color name="red">#F75564</color>
     <color name="yellow">#FFEFDA</color>
+    <color name="orange">#FF9800</color>
+    <color name="green">#8BC34A</color>
+    <color name="lightOrange">#F3BA63</color>
 </resources>

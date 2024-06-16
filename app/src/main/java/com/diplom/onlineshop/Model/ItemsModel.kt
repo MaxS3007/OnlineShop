@@ -10,6 +10,7 @@ data class ItemsModel(
     var CategoryId: Int=0,
     var title: String = "",
     var description: String = "",
+    val ostatok: Int=0,
     var picUrl: ArrayList<String> = ArrayList(),
     var size: ArrayList<String> = ArrayList(),
     var price: Double = 0.0,
@@ -23,6 +24,7 @@ data class ItemsModel(
         parcel.readInt(),
         parcel.readString().toString(),
         parcel.readString().toString(),
+        parcel.readInt(),
         parcel.createStringArrayList() as ArrayList<String>,
         parcel.createStringArrayList() as ArrayList<String>,
         parcel.readDouble(),
@@ -38,6 +40,7 @@ data class ItemsModel(
         p0.writeInt(CategoryId)
         p0.writeString(title)
         p0.writeString(description)
+        p0.writeInt(ostatok)
         p0.writeStringList(picUrl)
         p0.writeStringList(size)
         p0.writeDouble(price)
